@@ -23,12 +23,12 @@ public class RedHumanMotion : MonoBehaviour
         if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             hMove = Input.GetAxis("Horizontal") * angularSpeed * Time.deltaTime;
-            vMove = Input.GetAxis("Vertica l") * speed * Time.deltaTime;
+            vMove = Input.GetAxis("Vertical") * speed * Time.deltaTime;
             GetComponent<Animation>().Play("ShieldWarrior@Walk01");
             transform.Rotate(0, hMove, 0);
             transform.Translate(Vector3.forward * vMove);
             //TransformDirection - transform cordinates to globals
-            cController.Move(transform.TransformDirection(Vector3.forward * vMove));
+            //cController.Move(transform.TransformDirection(Vector3.forward * vMove));
         }
         else
         {
