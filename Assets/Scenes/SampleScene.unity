@@ -8541,12 +8541,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.84, y: 0.9, z: -41.47}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0046511292, y: 2.1079998, z: -3.710003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 1350963070}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -10449,17 +10449,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedHuman_ShieldWarrior
       objectReference: {fileID: 0}
+    - target: {fileID: 1634114148274192, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
+      propertyPath: m_TagString
+      value: RedKnight
+      objectReference: {fileID: 0}
     - target: {fileID: 4871155874647076, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.83534884
       objectReference: {fileID: 0}
     - target: {fileID: 4871155874647076, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.47971153
+      value: -0.9879999
       objectReference: {fileID: 0}
     - target: {fileID: 4871155874647076, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.45777
+      value: -33.44
       objectReference: {fileID: 0}
     - target: {fileID: 4871155874647076, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10501,8 +10505,25 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 65127291933801236, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65127291933801236, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65127291933801236, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65127291933801236, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95861659920858144, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
+    - {fileID: 54175312967286808, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
 --- !u!1001 &1203218369
 PrefabInstance:
@@ -11866,6 +11887,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d54e54dc3423543b0d1a5161ff592f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!143 &1350963069
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350963066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 3
+  m_Radius: 0.5
+  m_SlopeLimit: 80
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!4 &1350963070 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4871155874647076, guid: 6b1964733acd8264b99323299f8c1e3b, type: 3}
+  m_PrefabInstance: {fileID: 1195082596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1353656940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2219221585661182356, guid: cccf263df01d8c6469bc49178c518213, type: 3}

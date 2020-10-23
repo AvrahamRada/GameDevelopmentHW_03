@@ -15,7 +15,7 @@ public class GlassDoorMotion : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "MainCamera" || other.gameObject.tag == "RedKnight")
+        if(/*other.gameObject.tag == "MainCamera" ||*/ other.gameObject.tag == "RedKnight")
         {
             isOpen = true;
             animator.SetTrigger("GlassOpen");

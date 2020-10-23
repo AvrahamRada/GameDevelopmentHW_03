@@ -26,9 +26,9 @@ public class RedHumanMotion : MonoBehaviour
             vMove = Input.GetAxis("Vertical") * speed * Time.deltaTime;
             GetComponent<Animation>().Play("ShieldWarrior@Walk01");
             transform.Rotate(0, hMove, 0);
-            transform.Translate(Vector3.forward * vMove);
+            //transform.Translate(Vector3.forward * vMove);
             //TransformDirection - transform cordinates to globals
-            //cController.Move(transform.TransformDirection(Vector3.forward * vMove));
+            cController.Move(transform.TransformDirection(Vector3.forward * vMove));
         }
         else
         {
