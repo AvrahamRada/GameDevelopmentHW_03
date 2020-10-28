@@ -7,12 +7,14 @@ public class DoorMotion : MonoBehaviour
     public Animator animator;
     public GameObject door_axis;
     public bool isOpen;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         //animator = GetComponent<Animator>();
         animator = door_axis.GetComponent<Animator>();
         isOpen = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,8 @@ public class DoorMotion : MonoBehaviour
         {
             animator.SetTrigger("Open");
             isOpen = true;
+            //audioSource.Play();
+            audioSource.PlayDelayed(0.5f);
         }
             
     }
@@ -38,6 +42,8 @@ public class DoorMotion : MonoBehaviour
         {
             animator.SetTrigger("Close");
             isOpen = false;
+            //audioSource.Play();
+            audioSource.PlayDelayed(0.5f);
         }
 
     }

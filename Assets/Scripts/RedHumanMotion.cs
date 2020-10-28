@@ -7,6 +7,8 @@ public class RedHumanMotion : MonoBehaviour
     float speed;
     float angularSpeed;
     float hMove, vMove;
+    AudioSource audioSource;
+    public AudioClip aClip;
     CharacterController cController;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +16,7 @@ public class RedHumanMotion : MonoBehaviour
         speed = 1.5f;
         angularSpeed = 100f;
         cController = GetComponent<CharacterController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,10 @@ public class RedHumanMotion : MonoBehaviour
             GetComponent<Animation>().Play("ShieldWarrior@Walk01");
             transform.Rotate(0, hMove, 0);
 
+            ////transform.Translate(Vector3.forward * vMove);
+            ////TransformDirection - transform cordinates to globals
+            //cController.Move(transform.TransformDirection(Vector3.forward * vMove));
+
             // pos is the x-z coordinate of a character
             Vector3 pos = new Vector3(transform.position.x, 0, transform.position.z);
             Vector3 point;
@@ -36,6 +43,14 @@ public class RedHumanMotion : MonoBehaviour
             //transform.Translate(Vector3.forward * vMove);
             //TransformDirection - transform cordinates to globals
             cController.Move(transform.TransformDirection(direction));
+
+            //Sound effect
+            if(!audioSource.isPlaying)
+            {
+                audioSource.PlayDelayed(0.2f);
+                audioSource.PlayOneShot(aClip);
+            }
+                //audioSource.Play();
         }
         else
         {
