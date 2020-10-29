@@ -13,7 +13,7 @@ public class RedHumanMotion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 1.5f;
+        speed = SliderBehaviour.speed_level * 0.5f;
         angularSpeed = 100f;
         cController = GetComponent<CharacterController>();
         audioSource = GetComponent<AudioSource>();
@@ -22,8 +22,9 @@ public class RedHumanMotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = SliderBehaviour.speed_level * 0.5f;
         // If a key was pressed
-        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             hMove = Input.GetAxis("Horizontal") * angularSpeed * Time.deltaTime;
             vMove = Input.GetAxis("Vertical") * speed * Time.deltaTime;
