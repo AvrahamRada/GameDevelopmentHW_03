@@ -40,7 +40,7 @@ public class DoorMotion : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (isOpen)
+        if (isOpen && other.gameObject.tag == "RedKnight")
         {
             animator.SetTrigger("Close");
             isOpen = false;
