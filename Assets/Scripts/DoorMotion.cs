@@ -28,6 +28,8 @@ public class DoorMotion : MonoBehaviour
         //if (other.gameObject.tag == "MainCamera")
         if (/*other.CompareTag("MainCamera") ||*/ other.gameObject.tag == "RedKnight")
         {
+            // Update hp info
+            ShowInfo.hp--;
             animator.SetTrigger("Open");
             isOpen = true;
             //audioSource.Play();
